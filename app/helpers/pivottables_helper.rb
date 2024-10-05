@@ -111,6 +111,6 @@ module PivottablesHelper
   def javascript_exists?(script)
     # Used to avoid Route Error in logs.
     script = "#{Rails.root}/public/plugin_assets/redmine_pivot_table/javascripts/#{script}"
-    File.exists?(script) || File.exists?("#{script}.coffee") 
+    File.exist?(script) || File.exist?("#{script}.coffee") 
   end
 end
